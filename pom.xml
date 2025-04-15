@@ -1,0 +1,101 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.example</groupId>
+    <artifactId>your-artifact-id</artifactId> <!-- Change to your own artifact ID -->
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <javafx.version>17.0.6</javafx.version> <!-- JavaFX version -->
+        <junit.version>5.9.0</junit.version> <!-- JUnit version -->
+        <maven.compiler.source>17</maven.compiler.source> <!-- Set to your desired Java version -->
+        <maven.compiler.target>17</maven.compiler.target> <!-- Set to your desired Java version -->
+    </properties>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>20.0.0</version>
+        </dependency>
+        <!-- JavaFX Controls -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-controls</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <!-- JavaFX FXML -->
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-fxml</artifactId>
+            <version>${javafx.version}</version>
+        </dependency>
+
+        <!-- FormsFX Core -->
+        <dependency>
+            <groupId>com.dlsc.formsfx</groupId>
+            <artifactId>formsfx-core</artifactId>
+            <version>11.6.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.openjfx</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!-- JUnit for Testing -->
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>itext7-core</artifactId>
+            <version>7.1.16</version>
+        </dependency>
+
+        <!-- MySQL JDBC Driver -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.30</version> <!-- Change to the latest stable version as needed -->
+        </dependency>
+    </dependencies>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.openjfx</groupId>
+                <artifactId>javafx-maven-plugin</artifactId>
+                <version>0.0.10</version> <!-- Use the latest version -->
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>your.package.MainClass</mainClass> <!-- Change to your actual main class path -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

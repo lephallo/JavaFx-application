@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="695.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehivlesproject.CarController">
+   <Pane layoutX="16.0" layoutY="16.0" prefHeight="553.0" prefWidth="662.0" style="-fx-background-color: white;">
+      <children>
+         <Text layoutX="148.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Car available to rent!" wrappingWidth="331.7366943359375">
+            <font>
+               <Font size="30.0" />
+            </font>
+         </Text>
+         <ImageView fitHeight="213.0" fitWidth="232.0" layoutX="8.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../log/log.jpg" />
+            </image>
+         </ImageView>
+         <Button fx:id="btnVan" layoutX="25.0" layoutY="315.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Van" />
+         <Button fx:id="btnBike" layoutX="29.0" layoutY="375.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Bike" />
+         <Button fx:id="btnTruck" layoutX="35.0" layoutY="435.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Truck" />
+         <Button fx:id="btnBack" layoutX="35.0" layoutY="488.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="172.0" text="Back" />
+         <Label layoutX="234.0" layoutY="239.0" text="name:Yellow Benze" />
+         <Label layoutX="234.0" layoutY="256.0" text="ID:3" />
+         <Label layoutX="461.0" layoutY="231.0" text="name:Accord" />
+         <Label layoutX="465.0" layoutY="248.0" text="ID:4" />
+         <Label layoutX="475.0" layoutY="480.0" text="ID:6" />
+         <Label layoutX="264.0" layoutY="480.0" text="ID:5" />
+         <Button fx:id="rentButton3" layoutX="234.0" layoutY="273.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="194.0" text="Rent" />
+         <Button fx:id="rentButton2" layoutX="461.0" layoutY="264.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="194.0" text="Rent" />
+         <Label layoutX="264.0" layoutY="460.0" text="name:Golf" />
+         <Label layoutX="465.0" layoutY="460.0" text="Name:Sonata" />
+      </children>
+   </Pane>
+   <Button fx:id="rentButton1" layoutX="484.0" layoutY="509.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="194.0" text="Rent" />
+   <ImageView fitHeight="175.0" fitWidth="200.0" layoutX="481.0" layoutY="368.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../car1/car1/car1.jpg" />
+   </ImageView>
+   <ImageView fitHeight="113.0" fitWidth="200.0" layoutX="241.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../car2/car2/car2.jpg" />
+   </ImageView>
+   <ImageView fitHeight="135.0" fitWidth="200.0" layoutX="471.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+      <Image url="@../../car3/car3/car3.jpg" />
+   </ImageView>
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="25.0" layoutY="551.0" pickOnBounds="true" preserveRatio="true" />
+   <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="241.0" layoutY="359.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../truck3/car11.png" />
+      </image>
+   </ImageView>
+   <Button fx:id="rentButton11" layoutX="277.0" layoutY="509.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="194.0" text="Rent" />
+</AnchorPane>

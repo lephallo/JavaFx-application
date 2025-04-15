@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.Light?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="414.0" prefWidth="718.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehivlesproject.RegisterController">
+   <Pane layoutX="20.0" layoutY="13.0" prefHeight="388.0" prefWidth="686.0" style="-fx-background-color: white;">
+      <children>
+      
+         <Button layoutX="466.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleLoginRedirect" prefHeight="26.0" prefWidth="186.0" text="Login" />
+      
+         <!-- Link the Register button to the handleRegister method -->
+         <Button layoutX="250.0" layoutY="329.0" mnemonicParsing="false" onAction="#handleRegister" prefHeight="26.0" prefWidth="186.0" text="Register" />
+         <RadioButton fx:id="customerRadio" layoutX="363.0" layoutY="283.0" text="Customer" />
+         <RadioButton fx:id="adminRadio" layoutX="482.0" layoutY="283.0" prefHeight="0.0" prefWidth="57.0" text="Admin" />
+         <RadioButton fx:id="employeeRadio" layoutX="567.0" layoutY="283.0" text="Employee" />
+      
+         <Label layoutX="261.0" layoutY="283.0" text="Role:" />
+         <PasswordField fx:id="confirmPasswordField" layoutX="251.0" layoutY="239.0" prefHeight="26.0" prefWidth="408.0" />
+      
+         <Label layoutX="250.0" layoutY="210.0" text="Confirm Password:" />
+         <PasswordField fx:id="passwordField" layoutX="251.0" layoutY="181.0" prefHeight="26.0" prefWidth="401.0" />
+      
+         <Label layoutX="241.0" layoutY="140.0" text="Create Password:" />
+         <TextField fx:id="nameField" layoutX="247.0" layoutY="110.0" prefHeight="26.0" prefWidth="408.0" />
+         <Label layoutX="243.0" layoutY="70.0" text="Name:" />
+         <ImageView fitHeight="43.0" fitWidth="74.0" layoutX="373.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../lock/Lock.jpg" />
+         </ImageView>
+      
+         <ImageView fitHeight="252.0" fitWidth="220.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@../../../log/log.jpg" />
+         </ImageView>
+         <Text layoutX="74.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="With">
+            <font>
+               <Font name="System Bold" size="33.0" />
+            </font>
+         </Text>
+         <Text layoutX="89.0" layoutY="342.0" strokeType="OUTSIDE" strokeWidth="0.0" text="us!">
+            <font>
+               <Font name="System Bold" size="33.0" />
+            </font>
+         </Text>
+      </children>
+      <effect>
+         <Lighting>
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+            <light>
+               <Light.Distant />
+            </light>
+         </Lighting>
+      </effect>
+   </Pane>
+</AnchorPane>

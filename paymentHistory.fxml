@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+
+<AnchorPane prefHeight="490.0" prefWidth="600.0"
+            style="-fx-background-color: lightblue;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.vehivlesproject.RentalHistoryController">
+    <children>
+        <Pane layoutX="22.0" layoutY="102.0" prefHeight="374.0" prefWidth="556.0" style="-fx-background-color: white;">
+            <effect>
+                <Lighting>
+                    <bumpInput><Shadow /></bumpInput>
+                    <light>
+                        <Light.Distant>
+                            <color><Color red="0.84" green="0.88" blue="0.87" /></color>
+                        </Light.Distant>
+                    </light>
+                </Lighting>
+            </effect>
+            <children>
+                <!-- Table View -->
+                <TableView fx:id="paymentTable" layoutX="66.0" layoutY="67.0" prefHeight="134.0" prefWidth="385.0">
+                    <columns>
+                        <TableColumn fx:id="bookingIdCol" prefWidth="75.0" text="Booking Id" />
+                        <TableColumn fx:id="paymentMethodCol" prefWidth="112.8" text="Payment Method" />
+                        <TableColumn fx:id="amountCol" prefWidth="94.4" text="Amount" />
+                        <TableColumn fx:id="paymentDateCol" prefWidth="100.2" text="Payment Date" />
+                    </columns>
+                </TableView>
+
+                <!-- Back and Logout Buttons -->
+                <Button fx:id="backBtn" layoutX="66.0" layoutY="246.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="164.0" text="Back" onAction="#handleBackButtonAction" />
+                <Button fx:id="logoutBtn" layoutX="287.0" layoutY="246.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="164.0" text="Logout" onAction="#handleLogoutButtonAction" />
+            </children>
+        </Pane>
+
+        <!-- Top Pane for Search -->
+        <Pane layoutX="19.0" layoutY="43.0" prefHeight="42.0" prefWidth="556.0" style="-fx-background-color: white;">
+            <children>
+                <Button fx:id="submitBtn" layoutX="444.0" layoutY="9.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="Submit" onAction="#handleSubmitButtonAction" />
+                <TextField fx:id="customerIdField" layoutX="53.0" layoutY="9.0" prefHeight="25.0" prefWidth="391.0" promptText="Enter your Customer ID to view your rental History" />
+            </children>
+        </Pane>
+    </children>
+</AnchorPane>

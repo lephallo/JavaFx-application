@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.Light?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="682.0" prefWidth="887.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehivlesproject.VehicleManagementController">
+   <Label layoutX="25.0" layoutY="151.0" prefHeight="18.0" prefWidth="171.0" />
+   <Pane layoutX="24.0" layoutY="44.0" prefHeight="603.0" prefWidth="840.0" style="-fx-background-color: white;">
+      <Text layoutX="197.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Management" wrappingWidth="318.13671875">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TableView fx:id="vehicleTable" layoutX="42.0" layoutY="86.0" onSort="#loadVehicleData" prefHeight="200.0" prefWidth="449.0">
+         <columns>
+            <TableColumn fx:id="vehicleIdColumn" prefWidth="75.0" text="Vehicle Id" />
+            <TableColumn fx:id="brandModelColumn" prefWidth="75.0" text="BrandModel" />
+            <TableColumn fx:id="categoryColumn" prefWidth="75.0" text="Category" />
+            <TableColumn fx:id="rentalPriceColumn" prefWidth="75.0" text="Rental Price" />
+            <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Status" />
+            <TableColumn fx:id="customerIdColumn" prefWidth="75.0" text="CustomerID" />
+         </columns>
+      </TableView>
+      <TextField fx:id="vehicleIdField" layoutX="150.0" layoutY="362.0" prefHeight="26.0" prefWidth="378.0" />
+      <Label layoutX="8.0" layoutY="366.0" prefHeight="18.0" prefWidth="171.0" text="Vehicle ID" />
+      <Label layoutX="8.0" layoutY="416.0" prefHeight="18.0" prefWidth="171.0" text="Brand and Model" />
+      <TextField fx:id="brandModelField" layoutX="154.0" layoutY="412.0" prefHeight="26.0" prefWidth="378.0" />
+      <TextField fx:id="rentalPriceField" layoutX="154.0" layoutY="462.0" prefHeight="26.0" prefWidth="370.0" />
+      <Button fx:id="updateButton" layoutX="595.0" layoutY="462.0" mnemonicParsing="false" onAction="#updateVehicle" prefHeight="26.0" prefWidth="222.0" text="Update" />
+      <Button fx:id="deleteButton" layoutX="595.0" layoutY="509.0" mnemonicParsing="false" onAction="#deleteVehicle" prefHeight="26.0" prefWidth="222.0" text="Delete" />
+      <Button fx:id="backButton" layoutX="595.0" layoutY="546.0" mnemonicParsing="false" onAction="#goBackToAdminDashboard" prefHeight="26.0" prefWidth="222.0" text="Back" />
+      <Button fx:id="addButton" layoutX="595.0" layoutY="412.0" mnemonicParsing="false" onAction="#addVehicle" prefHeight="26.0" prefWidth="222.0" text="Add" />
+      <TextField layoutX="154.0" layoutY="509.0" prefHeight="26.0" prefWidth="378.0" />
+      <Label layoutX="7.0" layoutY="513.0" prefHeight="18.0" prefWidth="344.0" text="Availability Status" />
+      <Label layoutX="8.0" layoutY="466.0" prefHeight="18.0" prefWidth="171.0" text="Rental Price per Day" />
+      <ImageView fitHeight="388.0" fitWidth="254.0" layoutX="563.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../../../log/log.jpg" />
+      </ImageView>
+      <Label layoutX="7.0" layoutY="563.0" prefHeight="18.0" prefWidth="344.0" text="CustomerID" />
+      <TextField fx:id="customerIdField" layoutX="154.0" layoutY="559.0" prefHeight="26.0" prefWidth="378.0" />
+      <Label layoutX="7.0" layoutY="324.0" prefHeight="18.0" prefWidth="344.0" text="Category" />
+      <TextField fx:id="categoryField" layoutX="154.0" layoutY="320.0" prefHeight="26.0" prefWidth="378.0" />
+      <effect>
+         <Lighting specularConstant="0.89" specularExponent="13.76" surfaceScale="4.53">
+            <bumpInput>
+               <Shadow />
+            </bumpInput>
+            <light>
+               <Light.Distant />
+            </light>
+         </Lighting>
+      </effect>
+   </Pane>
+</AnchorPane>

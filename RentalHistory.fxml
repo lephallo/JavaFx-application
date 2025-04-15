@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"  spacing="10" alignment="CENTER" padding="20">
+    <TableView fx:id="rentalHistoryTable" prefWidth="800" prefHeight="400">
+        <columns>
+            <!-- Vehicle ID Column -->
+            <TableColumn fx:id="vehicleIdColumn" text="Vehicle ID" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="vehicleId"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <!-- Brand & Model Column -->
+            <TableColumn fx:id="brandModelColumn" text="Brand and Model" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="brandModel"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <!-- Category Column -->
+            <TableColumn fx:id="categoryColumn" text="Category" prefWidth="100">
+                <cellValueFactory>
+                    <PropertyValueFactory property="category"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <!-- Rental Duration (Days) Column -->
+            <TableColumn fx:id="rentalDurationColumn" text="Rental Duration (Days)" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="rentalDuration"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <!-- Customer Name Column -->
+            <TableColumn fx:id="customerNameColumn" text="Customer Name" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="customerName"/>
+                </cellValueFactory>
+            </TableColumn>
+
+            <!-- Driving License Number Column -->
+            <TableColumn fx:id="drivingLicenseNumberColumn" text="License Number" prefWidth="150">
+                <cellValueFactory>
+                    <PropertyValueFactory property="drivingLicenseNumber"/>
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>

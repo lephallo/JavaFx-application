@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" prefHeight="723.0" prefWidth="1183.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.vehivlesproject.AdminDashboardController">
+   <children>
+      <Pane layoutX="14.0" layoutY="28.0" prefHeight="678.0" prefWidth="1150.0" style="-fx-background-color: white;">
+         <effect>
+            <Lighting diffuseConstant="1.26" specularConstant="1.42" specularExponent="18.9" surfaceScale="6.24">
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+
+               </light>
+            </Lighting>
+         </effect>
+         <children>
+            <Text layoutX="23.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Admin Dashboard" wrappingWidth="482.13">
+               <font>
+                  <Font size="31.0" />
+               </font>
+            </Text>
+
+            <!-- Buttons -->
+            <Pane layoutX="22.0" layoutY="80.0" prefHeight="49.0" prefWidth="803.0">
+               <children>
+                  <Button fx:id="generateReportButton" layoutX="61.0" layoutY="12.0" mnemonicParsing="false" onAction="#generateReport" prefHeight="26.0" prefWidth="137.0" text="Generate Reports" />
+                  <Button fx:id="managePaymentsButton" layoutX="229.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="129.0" text="Manage Booking" />
+                  <Button fx:id="manageUsersButton" layoutX="378.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="129.0" text="Manage Customers" />
+                  <Button fx:id="manageVehiclesButton" layoutX="529.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="129.0" text="Manage Vehicles" />
+                  <Button fx:id="logoutButton" layoutX="666.0" layoutY="12.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="123.0" text="Logout" />
+               </children>
+            </Pane>
+
+            <!-- Line Chart -->
+            <LineChart fx:id="lineChart" layoutX="36.0" layoutY="264.0" prefHeight="300.0" prefWidth="500.0" title="Vehicle Categories">
+               <xAxis>
+                  <CategoryAxis label="Category" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="Number of Vehicles" side="LEFT" />
+               </yAxis>
+            </LineChart>
+
+            <!-- Bar Chart -->
+            <BarChart fx:id="barChart" layoutX="607.0" layoutY="278.0" prefHeight="300.0" prefWidth="500.0" title="Registered Customers">
+               <xAxis>
+                  <CategoryAxis label="Customer Name" side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis label="Number of Records" side="LEFT" />
+               </yAxis>
+            </BarChart>
+
+            <!-- Pie Chart -->
+            <PieChart fx:id="pieChart" layoutX="834.0" layoutY="13.0" prefHeight="270.0" prefWidth="302.0" title="Customer Distribution" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
